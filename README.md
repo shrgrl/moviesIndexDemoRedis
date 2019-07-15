@@ -30,7 +30,22 @@ Komut ekranında gösterilen port adresini web tarayıcımıza yazdıktan sonra 
 
 ![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img2.JPG)
 
-Ana sayfamızda bulunan arama ekranına veritabanımızda bulunan bir film adı yazıyoruz. 
+Ana sayfamızda bulunan arama ekranına veritabanımızda bulunan bir film adı yazıp <i>Ara</i> butonuna basmamız gerekiyor. İşlemin ardından bize aradığımız film ile ilgili veritabanındaki tüm bilgiler yansıtılıyor. 
 
 ![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img3.JPG)
+
+Aradığımız film Redis Cache'de bulunmuyorsa, film Redis Cache'e ekleniyor. Diğer aramalarda Redis Cache'den kullanılıyor.
+
+![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img4.JPG)
+
+Eğer kutucuğu boş bırakırsak bize bir uyarı kutucuğu gösteriliyor.
+
+![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img5.JPG)
+
+Kutucuğa veritabanında bulunmayan bir film adı girdiğimizde ise karşımıza filmin bulunamadığına dair bir yazı çıkıyor.
+
+![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img6.JPG)
+![](https://github.com/shrgrl/moviesIndexDemoRedis/blob/master/img7.JPG)
+
+Uygulamanın arayüzleri ve işleyişi bu şekildedir.
 
