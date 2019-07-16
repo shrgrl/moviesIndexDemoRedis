@@ -1,7 +1,8 @@
 # moviesIndexDemo
 
 ## MongoDB
-MongoDB, basit anlatımı ile açık kaynak kodlu bir NoSQL veritabanı uygulamasıdır. Esnek ve kullanımı kolay olması nedeniyle kısa zamanda popüler olmuş olup, yaygın bir kitle tarafından kullanılmaktadır.<br>
+MongoDB, basit anlatımı ile açık kaynak kodlu bir NoSQL veritabanı uygulamasıdır. Esnek ve kullanımı kolay olması nedeniyle kısa zamanda popüler olmuş olup, yaygın bir kitle tarafından kullanılmaktadır.
+
 <strong>MongoDB Özellikleri</strong>
 <ul>
   <li>Öncelikli özellik, ölçeklenebilir olmasıdır (scalable).</li>
