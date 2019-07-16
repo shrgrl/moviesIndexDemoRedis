@@ -5,35 +5,36 @@ MongoDB, basit anlatımı ile açık kaynak kodlu bir NoSQL veritabanı uygulama
 <strong>MongoDB Özellikleri</strong>
 <ul>
   <li>Öncelikli özellik, ölçeklenebilir olmasıdır (scalable).</li>
+  <li>Verileri belge olarak saklar. JSON verileri kullanılabilir. Veriler JSON olarak saklandığı için gelen verilerin yapısı değişse dahi kaydetme konusunda herhangi bir sıkıntı yaşamazsınız.</li>
+  <li>Verilerin birden fazla kopyasını saklayabilirsiniz. Böylelikle veri kaybının da önüne geçmiş olursunuz.</li>
+  <li>Veriler üzerinde index oluşturabilirsiniz. Böylelikle aradığınız tüm verilere hızlı ve kolay bir şekilde ulaşabilirsiniz.</li>
 </ul>
 
-*Verileri belge olarak saklar. JSON verileri kullanılabilir. Veriler JSON olarak saklandığı için gelen verilerin yapısı değişse dahi kaydetme konusunda herhangi bir sıkıntı yaşamazsınız.
-*Verilerin birden fazla kopyasını saklayabilirsiniz. Böylelikle veri kaybının da önüne geçmiş olursunuz.
-*Veriler üzerinde index oluşturabilirsiniz. Böylelikle aradığınız tüm verilere hızlı ve kolay bir şekilde ulaşabilirsiniz.
-
 <strong>Windows İçin MongoDB Kurulumu</strong>
-
-*İlk olarak bilgisayarınızın işletim sistemine uygun olan MongoDB programını indirmekle başlayın. Programın indirildiği yolu Windows path sisteminize eklerseniz ilerleyen dönemlerde komutlarınızı çok daha rahat bir şekilde çalıştırabilirsiniz. Programı indirmek için [bu](https://www.mongodb.org/downloads) linki kullanabilirsiniz.
-*İndirdiğiniz kurulum dosyasına tıklayın ve sizi yönlendiren adımları izleyerek kurulum işlemlerini tamamlayın. İndirme yolunuz şöyle olacak: C:\Program Files\MongoDB\Server\3.0.1\bin
-*Bu yola gittikten sonra sizin için önemli olan iki dosya göreceksiniz: mongo.exe ve mongod.exe
-*MongoDB kullanımı için Command Prompt kullanırsanız bundan sonraki adımlarda rahat edersiniz. Önce biraz önce kullandığınız yolu ortam değişkenlerine ekleyin. Bunun için bilgisayar dosyasına sağ tıklayın ve özelliklere gittikten sonra gelişmiş sistem ayarlarına tıklayın. Burada ortam değişkenlerini göreceksiniz.
-*Ortam değişkenlerine girdikten sonra önünüze bir pencere açılacak. Bu pencerede ilgili path’i bulun ve en sonuna MongoDB’nin kendi yolunu yapıştırın.
-*İşlem tamam ise, bir sonraki adımda veritabanınızın kaydedileceği yeri belirlemeniz gerekiyor. Öncelikle Cmd’yi açın ve şu komutları çalıştırın: md \data, md \data\db. Bu komutları çalıştırarak önce C dizininin altında bir data klasörü oluşturdunuz, ardından bu data klasörünün de altında db klasörü oluşturdunuz.
-*Artık veritabanı uygulamanızı çalıştırabilirsiniz. Server için mongon yazın. Karşınızdaki ekranda “on port 27017” şeklinde bir yazı görürseniz, kurulumunuzu başarıyla gerçekleştirdiniz demektir.
+<ul>
+  <li>İlk olarak bilgisayarınızın işletim sistemine uygun olan MongoDB programını indirmekle başlayın. Programın indirildiği yolu Windows path sisteminize eklerseniz ilerleyen dönemlerde komutlarınızı çok daha rahat bir şekilde çalıştırabilirsiniz. Programı indirmek için [bu](https://www.mongodb.org/downloads) linki kullanabilirsiniz.</li>
+  <li>İndirdiğiniz kurulum dosyasına tıklayın ve sizi yönlendiren adımları izleyerek kurulum işlemlerini tamamlayın. İndirme yolunuz şöyle olacak: C:\Program Files\MongoDB\Server\3.0.1\bin</li>
+  <li>Bu yola gittikten sonra sizin için önemli olan iki dosya göreceksiniz: mongo.exe ve mongod.exe</li>
+  <li>MongoDB kullanımı için Command Prompt kullanırsanız bundan sonraki adımlarda rahat edersiniz. Önce biraz önce kullandığınız yolu ortam değişkenlerine ekleyin. Bunun için bilgisayar dosyasına sağ tıklayın ve özelliklere gittikten sonra gelişmiş sistem ayarlarına tıklayın. Burada ortam değişkenlerini göreceksiniz.</li>
+  <li>Ortam değişkenlerine girdikten sonra önünüze bir pencere açılacak. Bu pencerede ilgili path’i bulun ve en sonuna MongoDB’nin kendi yolunu yapıştırın.</li>
+  <li>İşlem tamam ise, bir sonraki adımda veritabanınızın kaydedileceği yeri belirlemeniz gerekiyor. Öncelikle Cmd’yi açın ve şu komutları çalıştırın: md \data, md \data\db. Bu komutları çalıştırarak önce C dizininin altında bir data klasörü oluşturdunuz, ardından bu data klasörünün de altında db klasörü oluşturdunuz.</li>
+  <li>Artık veritabanı uygulamanızı çalıştırabilirsiniz. Server için mongon yazın. Karşınızdaki ekranda “on port 27017” şeklinde bir yazı görürseniz, kurulumunuzu başarıyla gerçekleştirdiniz demektir.</li>
+</ul>
 
 ## Redis Cache
 Redis; no-sql veritabanı olarak, önbellekleme için ve mesaj sunucusu amacıyla kullanılan, in-memory bir veri-yapıları deposudur. Redis’in kendisini veri-yapıları deposu olarak adlandırmasındaki sebep diğer alternatiflerine göre daha fazla veri türünü desteklemesidir.
 
 <strong>Avantajları</strong>
-*Senkron çalıştığı için son derece hızlıdır.
-*Birçok veri türünü destekler.
-*Veriyi hem RAM üzerine hem de ayarlandığınız konfigürasyona göre disk üzerine kaydedebilir.
-*Disk üzerine kayıt yaptığı için restart sonrasında aynı verilerle çalışmaya devam eder.
-*Son derece aktif bir kullanıcı kitlesine sahiptir.
-*Sharding, Cluster, Sentinel, Replication gibi birçok enterprise özelliklere sahiptir.
+<ul>
+  <li>Senkron çalıştığı için son derece hızlıdır.</li>
+  <li>Birçok veri türünü destekler.</li>
+  <li>Veriyi hem RAM üzerine hem de ayarlandığınız konfigürasyona göre disk üzerine kaydedebilir.</li>
+  <li>Disk üzerine kayıt yaptığı için restart sonrasında aynı verilerle çalışmaya devam eder.</li>
+  <li>Son derece aktif bir kullanıcı kitlesine sahiptir.</li>
+  <li>Sharding, Cluster, Sentinel, Replication gibi birçok enterprise özelliklere sahiptir.</li>
+</ul>
 
-##Projenin Çalıştırılması
-
+## Projenin Çalıştırılması
 Bu proje github sayfasında yer alan Movies.csv dosyasını kullanan bir web uygulamasıdır ve <strong><i>Node.js/Express/MongoDB/Redis Cache</i></strong> ile yazılmış olup, lokal bilgisayarımızda çalıştırabilmekteyiz.
 Öncelikli olarak Movies.csv dosyasını bilgisayarınızdaki MongoDB veri tabanına import etmemiz gerekmektedir.
 
