@@ -1,5 +1,5 @@
 # moviesIndexDemo
-Bu projede github sayfasında yer alan Movies.csv dosyasını kullanan bir web uygulamasıdır ve <strong><i>Node.js/Express/MongoDB/Redis Cache</i></strong> ile yazılmış olup, lokal bilgisayarımızda çalıştırabilmekteyiz.
+Bu proje github sayfasında yer alan Movies.csv dosyasını kullanan bir web uygulamasıdır ve <strong><i>Node.js/Express/MongoDB/Redis Cache</i></strong> ile yazılmış olup, lokal bilgisayarımızda çalıştırabilmekteyiz.
 Öncelikli olarak Movies.csv dosyasını bilgisayarınızdaki MongoDB veri tabanına import etmemiz gerekmektedir.
 
 ```javascript
