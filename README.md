@@ -3,7 +3,10 @@
 ## MongoDB
 MongoDB, basit anlatımı ile açık kaynak kodlu bir NoSQL veritabanı uygulamasıdır. Esnek ve kullanımı kolay olması nedeniyle kısa zamanda popüler olmuş olup, yaygın bir kitle tarafından kullanılmaktadır.<br>
 <strong>MongoDB Özellikleri</strong>
-*Öncelikli özellik, ölçeklenebilir olmasıdır (scalable).
+<ul>
+  <li>Öncelikli özellik, ölçeklenebilir olmasıdır (scalable).</li>
+</ul>
+
 *Verileri belge olarak saklar. JSON verileri kullanılabilir. Veriler JSON olarak saklandığı için gelen verilerin yapısı değişse dahi kaydetme konusunda herhangi bir sıkıntı yaşamazsınız.
 *Verilerin birden fazla kopyasını saklayabilirsiniz. Böylelikle veri kaybının da önüne geçmiş olursunuz.
 *Veriler üzerinde index oluşturabilirsiniz. Böylelikle aradığınız tüm verilere hızlı ve kolay bir şekilde ulaşabilirsiniz.
